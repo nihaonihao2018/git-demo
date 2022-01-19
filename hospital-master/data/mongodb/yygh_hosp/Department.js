@@ -1,0 +1,3781 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : mongodb
+ Source Server Type    : MongoDB
+ Source Server Version : 30424
+ Source Host           : localhost:27017
+ Source Schema         : yygh_hosp
+
+ Target Server Type    : MongoDB
+ Target Server Version : 30424
+ File Encoding         : 65001
+
+ Date: 14/12/2021 15:58:29
+*/
+
+
+// ----------------------------
+// Collection structure for Department
+// ----------------------------
+db.getCollection("Department").drop();
+db.createCollection("Department");
+db.getCollection("Department").createIndex({
+    hoscode: NumberInt("1")
+}, {
+    name: "hoscode"
+});
+db.getCollection("Department").createIndex({
+    depcode: NumberInt("1")
+}, {
+    name: "depcode",
+    unique: true
+});
+
+// ----------------------------
+// Documents of Department
+// ----------------------------
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98ae0"),
+    hoscode: "1000",
+    depcode: "200050923",
+    depname: "门诊部核酸检测门诊(东院)",
+    intro: "门诊部核酸检测门诊(东院)",
+    bigcode: "44f162029abb45f9ff0a5f743da0650d",
+    bigname: "全部科室",
+    createTime: ISODate("2021-05-10T03:23:11.275Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.275Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98ae1"),
+    hoscode: "1000",
+    depcode: "200050924",
+    depname: "国际医疗部门诊",
+    intro: "国际医疗部门诊",
+    bigcode: "44f162029abb45f9ff0a5f743da0650d",
+    bigname: "全部科室",
+    createTime: ISODate("2021-05-10T03:23:11.386Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.386Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98ae2"),
+    hoscode: "1000",
+    depcode: "200050931",
+    depname: "临床营养科(西院国际医疗)",
+    intro: "临床营养科(西院国际医疗)",
+    bigcode: "44f162029abb45f9ff0a5f743da0650d",
+    bigname: "全部科室",
+    createTime: ISODate("2021-05-10T03:23:11.409Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.409Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98ae3"),
+    hoscode: "1000",
+    depcode: "200050964",
+    depname: "内分泌科互联网诊疗",
+    intro: "内分泌科互联网诊疗",
+    bigcode: "44f162029abb45f9ff0a5f743da0650d",
+    bigname: "全部科室",
+    createTime: ISODate("2021-05-10T03:23:11.428Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.428Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98ae4"),
+    hoscode: "1000",
+    depcode: "200051188",
+    depname: "心内科互联网诊疗",
+    intro: "心内科互联网诊疗",
+    bigcode: "44f162029abb45f9ff0a5f743da0650d",
+    bigname: "全部科室",
+    createTime: ISODate("2021-05-10T03:23:11.451Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.451Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98ae5"),
+    hoscode: "1000",
+    depcode: "200051469",
+    depname: "特需心理医学科门诊2",
+    intro: "特需心理医学科门诊2",
+    bigcode: "44f162029abb45f9ff0a5f743da0650d",
+    bigname: "全部科室",
+    createTime: ISODate("2021-05-10T03:23:11.473Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.473Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98ae6"),
+    hoscode: "1000",
+    depcode: "200041542",
+    depname: "特需心内科门诊2",
+    intro: "特需心内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.493Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.493Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98ae7"),
+    hoscode: "1000",
+    depcode: "200042374",
+    depname: "特需消化内科门诊2",
+    intro: "特需消化内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.513Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.513Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98ae8"),
+    hoscode: "1000",
+    depcode: "200040886",
+    depname: "特需内分泌科门诊(西院)1",
+    intro: "特需内分泌科门诊(西院)1",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.531Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.531Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98ae9"),
+    hoscode: "1000",
+    depcode: "200041246",
+    depname: "特需呼吸内科门诊2",
+    intro: "特需呼吸内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.549Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.549Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98aea"),
+    hoscode: "1000",
+    depcode: "200041038",
+    depname: "特需肾内科门诊2",
+    intro: "特需肾内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.565Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.565Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98aeb"),
+    hoscode: "1000",
+    depcode: "200041244",
+    depname: "特需血液内科门诊2",
+    intro: "特需血液内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.583Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.583Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98aec"),
+    hoscode: "1000",
+    depcode: "200044248",
+    depname: "特需老年医学科门诊2",
+    intro: "特需老年医学科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.602Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.602Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98aed"),
+    hoscode: "1000",
+    depcode: "200040166",
+    depname: "特需普通内科门诊1",
+    intro: "特需普通内科门诊1",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.621Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.621Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98aee"),
+    hoscode: "1000",
+    depcode: "200041666",
+    depname: "内科门诊(西院)",
+    intro: "内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.643Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.643Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98aef"),
+    hoscode: "1000",
+    depcode: "200043118",
+    depname: "普通内科全科门诊",
+    intro: "普通内科全科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.658Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.658Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98af0"),
+    hoscode: "1000",
+    depcode: "200045974",
+    depname: "普通内科疑难病症门诊",
+    intro: "普通内科疑难病症门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.671Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.671Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98af1"),
+    hoscode: "1000",
+    depcode: "200048285",
+    depname: "特需肿瘤内科门诊2",
+    intro: "特需肿瘤内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.684Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.684Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98af2"),
+    hoscode: "1000",
+    depcode: "200048369",
+    depname: "特需普通内科门诊2",
+    intro: "特需普通内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.698Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.698Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98af3"),
+    hoscode: "1000",
+    depcode: "200048378",
+    depname: "卫干门诊(内科)",
+    intro: "卫干门诊(内科)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.71Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.71Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98af4"),
+    hoscode: "1000",
+    depcode: "200048380",
+    depname: "特需免疫内科门诊2",
+    intro: "特需免疫内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.724Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.724Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98af5"),
+    hoscode: "1000",
+    depcode: "200048440",
+    depname: "特需感染内科门诊2",
+    intro: "特需感染内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.739Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.739Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98af6"),
+    hoscode: "1000",
+    depcode: "200004002",
+    depname: "内分泌科门诊(西院)",
+    intro: "内分泌科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.751Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.751Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98af7"),
+    hoscode: "1000",
+    depcode: "200004004",
+    depname: "特需内分泌科门诊2",
+    intro: "特需内分泌科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.763Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.763Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98af8"),
+    hoscode: "1000",
+    depcode: "200004020",
+    depname: "特需普通内科门诊(西院)",
+    intro: "特需普通内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.776Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.776Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98af9"),
+    hoscode: "1000",
+    depcode: "200004014",
+    depname: "肿瘤内科门诊",
+    intro: "肿瘤内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.79Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.79Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98afa"),
+    hoscode: "1000",
+    depcode: "200003975",
+    depname: "心内科门诊",
+    intro: "心内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.803Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.803Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98afb"),
+    hoscode: "1000",
+    depcode: "200003976",
+    depname: "心内科门诊(西院)",
+    intro: "心内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.817Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.817Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98afc"),
+    hoscode: "1000",
+    depcode: "200003977",
+    depname: "心内科高血压专科门诊",
+    intro: "心内科高血压专科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.835Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.835Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98afd"),
+    hoscode: "1000",
+    depcode: "200003978",
+    depname: "特需心内科门诊",
+    intro: "特需心内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.852Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.852Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98afe"),
+    hoscode: "1000",
+    depcode: "200004005",
+    depname: "神经科门诊",
+    intro: "神经科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.87Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.87Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98aff"),
+    hoscode: "1000",
+    depcode: "200004006",
+    depname: "神经科门诊(西院)",
+    intro: "神经科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.886Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.886Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98b00"),
+    hoscode: "1000",
+    depcode: "200004007",
+    depname: "神经内科癫痫门诊",
+    intro: "神经内科癫痫门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.899Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.899Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98b01"),
+    hoscode: "1000",
+    depcode: "200004010",
+    depname: "特需神经科门诊2",
+    intro: "特需神经科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.911Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.911Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98b02"),
+    hoscode: "1000",
+    depcode: "200003997",
+    depname: "消化内科门诊",
+    intro: "消化内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.926Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.926Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98b03"),
+    hoscode: "1000",
+    depcode: "200003998",
+    depname: "消化内科门诊(西院)",
+    intro: "消化内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.938Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.938Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98b04"),
+    hoscode: "1000",
+    depcode: "200003999",
+    depname: "早期胃癌专科门诊",
+    intro: "早期胃癌专科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.95Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.95Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98b05"),
+    hoscode: "1000",
+    depcode: "200004000",
+    depname: "特需消化内科门诊",
+    intro: "特需消化内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.963Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.963Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98b06"),
+    hoscode: "1000",
+    depcode: "200004001",
+    depname: "内分泌科门诊",
+    intro: "内分泌科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.976Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.976Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a71f7268a74686e98b07"),
+    hoscode: "1000",
+    depcode: "200004003",
+    depname: "特需内分泌科门诊",
+    intro: "特需内分泌科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:11.99Z"),
+    updateTime: ISODate("2021-05-10T03:23:11.99Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b08"),
+    hoscode: "1000",
+    depcode: "200003989",
+    depname: "免疫内科门诊",
+    intro: "免疫内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.001Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.001Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b09"),
+    hoscode: "1000",
+    depcode: "200003990",
+    depname: "免疫内科门诊(西院)",
+    intro: "免疫内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.013Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.013Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b0a"),
+    hoscode: "1000",
+    depcode: "200003991",
+    depname: "特需免疫内科门诊",
+    intro: "特需免疫内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.027Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.027Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b0b"),
+    hoscode: "1000",
+    depcode: "200003992",
+    depname: "特需免疫内科门诊(西院)",
+    intro: "特需免疫内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.046Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.046Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b0c"),
+    hoscode: "1000",
+    depcode: "200003993",
+    depname: "呼吸内科门诊",
+    intro: "呼吸内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.06Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.06Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b0d"),
+    hoscode: "1000",
+    depcode: "200003994",
+    depname: "呼吸内科门诊(西院)",
+    intro: "呼吸内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.072Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.072Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b0e"),
+    hoscode: "1000",
+    depcode: "200003995",
+    depname: "戒烟门诊",
+    intro: "戒烟门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.085Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.085Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b0f"),
+    hoscode: "1000",
+    depcode: "200003996",
+    depname: "特需呼吸内科门诊",
+    intro: "特需呼吸内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.1Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.1Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b10"),
+    hoscode: "1000",
+    depcode: "200003979",
+    depname: "肾内科门诊",
+    intro: "肾内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.11Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.11Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b11"),
+    hoscode: "1000",
+    depcode: "200003980",
+    depname: "肾内科门诊(西院)",
+    intro: "肾内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.122Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.122Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b12"),
+    hoscode: "1000",
+    depcode: "200003981",
+    depname: "特需肾内科门诊",
+    intro: "特需肾内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.135Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.135Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b13"),
+    hoscode: "1000",
+    depcode: "200003982",
+    depname: "血液科门诊",
+    intro: "血液科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.149Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.149Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b14"),
+    hoscode: "1000",
+    depcode: "200003983",
+    depname: "血友病门诊(西院)",
+    intro: "血友病门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.16Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.16Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b15"),
+    hoscode: "1000",
+    depcode: "200003984",
+    depname: "特需血液内科门诊",
+    intro: "特需血液内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.171Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.171Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b16"),
+    hoscode: "1000",
+    depcode: "200003985",
+    depname: "感染内科门诊",
+    intro: "感染内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.182Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.182Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b17"),
+    hoscode: "1000",
+    depcode: "200003986",
+    depname: "感染内科热病门诊",
+    intro: "感染内科热病门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.196Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.196Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b18"),
+    hoscode: "1000",
+    depcode: "200003987",
+    depname: "感染内科免疫功能低下门诊",
+    intro: "感染内科免疫功能低下门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.21Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.21Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b19"),
+    hoscode: "1000",
+    depcode: "200003988",
+    depname: "特需感染内科门诊",
+    intro: "特需感染内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.221Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.221Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b1a"),
+    hoscode: "1000",
+    depcode: "200003973",
+    depname: "老年综合门诊",
+    intro: "老年综合门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.238Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.238Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b1b"),
+    hoscode: "1000",
+    depcode: "200003974",
+    depname: "特需老年综合门诊",
+    intro: "特需老年综合门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.254Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.254Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b1c"),
+    hoscode: "1000",
+    depcode: "200003972",
+    depname: "内科门诊",
+    intro: "内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.267Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.267Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b1d"),
+    hoscode: "1000",
+    depcode: "200004018",
+    depname: "普通内科门诊",
+    intro: "普通内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.279Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.279Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b1e"),
+    hoscode: "1000",
+    depcode: "200004019",
+    depname: "普通内科门诊(西院)",
+    intro: "普通内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.295Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.295Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b1f"),
+    hoscode: "1000",
+    depcode: "200004015",
+    depname: "肿瘤内科门诊(西院)",
+    intro: "肿瘤内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.307Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.307Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b20"),
+    hoscode: "1000",
+    depcode: "200004016",
+    depname: "特需肿瘤内科门诊1",
+    intro: "特需肿瘤内科门诊1",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.318Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.318Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b21"),
+    hoscode: "1000",
+    depcode: "200004017",
+    depname: "特需肿瘤内科门诊(西院)",
+    intro: "特需肿瘤内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.328Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.328Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b22"),
+    hoscode: "1000",
+    depcode: "200004012",
+    depname: "重症肌无力专科门诊",
+    intro: "重症肌无力专科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.34Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.34Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b23"),
+    hoscode: "1000",
+    depcode: "200004008",
+    depname: "头疼专科门诊",
+    intro: "头疼专科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.353Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.353Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b24"),
+    hoscode: "1000",
+    depcode: "200004009",
+    depname: "脑血管病专科门诊",
+    intro: "脑血管病专科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.364Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.364Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b25"),
+    hoscode: "1000",
+    depcode: "200004011",
+    depname: "痴呆与脑白质病专科门诊",
+    intro: "痴呆与脑白质病专科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.374Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.374Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b26"),
+    hoscode: "1000",
+    depcode: "200004134",
+    depname: "肝炎门诊",
+    intro: "肝炎门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2021-05-10T03:23:12.39Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.39Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b27"),
+    hoscode: "1000",
+    depcode: "200045976",
+    depname: "特需血管外科门诊2",
+    intro: "特需血管外科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.4Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.4Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b28"),
+    hoscode: "1000",
+    depcode: "200040164",
+    depname: "特需胸外科门诊2",
+    intro: "特需胸外科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.415Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.415Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b29"),
+    hoscode: "1000",
+    depcode: "200048287",
+    depname: "乳腺外科乳癌化疗门诊(西院)",
+    intro: "乳腺外科乳癌化疗门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.43Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.43Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b2a"),
+    hoscode: "1000",
+    depcode: "200048331",
+    depname: "乳腺外科乳癌随访门诊(西院)",
+    intro: "乳腺外科乳癌随访门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.443Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.443Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b2b"),
+    hoscode: "1000",
+    depcode: "200048412",
+    depname: "特需整形外科门诊2",
+    intro: "特需整形外科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.462Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.462Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b2c"),
+    hoscode: "1000",
+    depcode: "200048490",
+    depname: "泌尿外科专项诊疗门诊",
+    intro: "泌尿外科专项诊疗门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.478Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.478Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b2d"),
+    hoscode: "1000",
+    depcode: "200048586",
+    depname: "胸外科化疗专病门诊",
+    intro: "胸外科化疗专病门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.491Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.491Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b2e"),
+    hoscode: "1000",
+    depcode: "200004041",
+    depname: "特需神经外科门诊2",
+    intro: "特需神经外科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.501Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.501Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b2f"),
+    hoscode: "1000",
+    depcode: "200004051",
+    depname: "心外科门诊",
+    intro: "心外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.513Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.513Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b30"),
+    hoscode: "1000",
+    depcode: "200004052",
+    depname: "心外科成人门诊",
+    intro: "心外科成人门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.527Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.527Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b31"),
+    hoscode: "1000",
+    depcode: "200004053",
+    depname: "特需心外科门诊1",
+    intro: "特需心外科门诊1",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.542Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.542Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b32"),
+    hoscode: "1000",
+    depcode: "200004054",
+    depname: "特需心外科门诊2",
+    intro: "特需心外科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.557Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.557Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b33"),
+    hoscode: "1000",
+    depcode: "200004049",
+    depname: "特需泌尿外科门诊2",
+    intro: "特需泌尿外科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.571Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.571Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b34"),
+    hoscode: "1000",
+    depcode: "200004072",
+    depname: "特需肝脏外科门诊2",
+    intro: "特需肝脏外科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.587Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.587Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b35"),
+    hoscode: "1000",
+    depcode: "200004027",
+    depname: "特需基本外科门诊2",
+    intro: "特需基本外科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.597Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.597Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b36"),
+    hoscode: "1000",
+    depcode: "200004031",
+    depname: "特需骨科门诊2",
+    intro: "特需骨科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.608Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.608Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b37"),
+    hoscode: "1000",
+    depcode: "200004046",
+    depname: "肾积水专科门诊",
+    intro: "肾积水专科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.621Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.621Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b38"),
+    hoscode: "1000",
+    depcode: "200004034",
+    depname: "神经外科门诊",
+    intro: "神经外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.636Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.636Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b39"),
+    hoscode: "1000",
+    depcode: "200004035",
+    depname: "神经外科门诊(西院)",
+    intro: "神经外科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.654Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.654Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b3a"),
+    hoscode: "1000",
+    depcode: "200004040",
+    depname: "特需神经外科门诊",
+    intro: "特需神经外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.678Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.678Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b3b"),
+    hoscode: "1000",
+    depcode: "200004059",
+    depname: "血管外科门诊",
+    intro: "血管外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.696Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.696Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b3c"),
+    hoscode: "1000",
+    depcode: "200004060",
+    depname: "血管外科门诊(西院)",
+    intro: "血管外科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.72Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.72Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b3d"),
+    hoscode: "1000",
+    depcode: "200004061",
+    depname: "动脉疾病专科门诊",
+    intro: "动脉疾病专科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.734Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.734Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b3e"),
+    hoscode: "1000",
+    depcode: "200004062",
+    depname: "特需血管外科门诊",
+    intro: "特需血管外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.749Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.749Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b3f"),
+    hoscode: "1000",
+    depcode: "200004063",
+    depname: "特需血管外科门诊(西院)",
+    intro: "特需血管外科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.765Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.765Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b40"),
+    hoscode: "1000",
+    depcode: "200004032",
+    depname: "胸外科门诊",
+    intro: "胸外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.781Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.781Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b41"),
+    hoscode: "1000",
+    depcode: "200004033",
+    depname: "特需胸外科门诊",
+    intro: "特需胸外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.794Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.794Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b42"),
+    hoscode: "1000",
+    depcode: "200004066",
+    depname: "特需整形外科门诊(西院)",
+    intro: "特需整形外科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.806Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.806Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b43"),
+    hoscode: "1000",
+    depcode: "200004067",
+    depname: "乳腺外科门诊",
+    intro: "乳腺外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.82Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.82Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b44"),
+    hoscode: "1000",
+    depcode: "200004068",
+    depname: "乳腺外科门诊(西院)",
+    intro: "乳腺外科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.836Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.836Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b45"),
+    hoscode: "1000",
+    depcode: "200004069",
+    depname: "特需乳腺外科门诊(西院)1",
+    intro: "特需乳腺外科门诊(西院)1",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.886Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.886Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b46"),
+    hoscode: "1000",
+    depcode: "200004042",
+    depname: "泌尿外科门诊",
+    intro: "泌尿外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.901Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.901Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b47"),
+    hoscode: "1000",
+    depcode: "200004043",
+    depname: "泌尿外科男科门诊",
+    intro: "泌尿外科男科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.915Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.915Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b48"),
+    hoscode: "1000",
+    depcode: "200004044",
+    depname: "泌尿外科门诊(西院)",
+    intro: "泌尿外科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.929Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.929Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b49"),
+    hoscode: "1000",
+    depcode: "200004045",
+    depname: "泌尿外科男科门诊(西院)",
+    intro: "泌尿外科男科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.941Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.941Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b4a"),
+    hoscode: "1000",
+    depcode: "200004047",
+    depname: "特需泌尿外科门诊",
+    intro: "特需泌尿外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.952Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.952Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b4b"),
+    hoscode: "1000",
+    depcode: "200004070",
+    depname: "肝脏外科门诊",
+    intro: "肝脏外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.968Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.968Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b4c"),
+    hoscode: "1000",
+    depcode: "200004071",
+    depname: "特需肝外科门诊",
+    intro: "特需肝外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.98Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.98Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7207268a74686e98b4d"),
+    hoscode: "1000",
+    depcode: "200004022",
+    depname: "外科门诊",
+    intro: "外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:12.994Z"),
+    updateTime: ISODate("2021-05-10T03:23:12.994Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b4e"),
+    hoscode: "1000",
+    depcode: "200004023",
+    depname: "基本外科门诊",
+    intro: "基本外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:13.004Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.004Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b4f"),
+    hoscode: "1000",
+    depcode: "200004025",
+    depname: "基本外科门诊(西院)",
+    intro: "基本外科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:13.014Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.014Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b50"),
+    hoscode: "1000",
+    depcode: "200004026",
+    depname: "特需基本外科门诊1",
+    intro: "特需基本外科门诊1",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:13.026Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.026Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b51"),
+    hoscode: "1000",
+    depcode: "200004028",
+    depname: "骨科门诊",
+    intro: "骨科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:13.041Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.041Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b52"),
+    hoscode: "1000",
+    depcode: "200004029",
+    depname: "骨科门诊(西院)",
+    intro: "骨科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:13.058Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.058Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b53"),
+    hoscode: "1000",
+    depcode: "200004030",
+    depname: "特需骨科门诊",
+    intro: "特需骨科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:13.068Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.068Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b54"),
+    hoscode: "1000",
+    depcode: "200004064",
+    depname: "整形美容外科门诊",
+    intro: "整形美容外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:13.079Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.079Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b55"),
+    hoscode: "1000",
+    depcode: "200004116",
+    depname: "急诊科",
+    intro: "急诊科",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:13.091Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.091Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b56"),
+    hoscode: "1000",
+    depcode: "200004065",
+    depname: "整形美容外科门诊(西院)",
+    intro: "整形美容外科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:13.106Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.106Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b57"),
+    hoscode: "1000",
+    depcode: "200039788",
+    depname: "泌尿外科肾癌靶向治疗专病门诊",
+    intro: "泌尿外科肾癌靶向治疗专病门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2021-05-10T03:23:13.118Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.118Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b58"),
+    hoscode: "1000",
+    depcode: "200046682",
+    depname: "特需综合妇科门诊",
+    intro: "特需综合妇科门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2021-05-10T03:23:13.127Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.127Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b59"),
+    hoscode: "1000",
+    depcode: "200046684",
+    depname: "特需妇科内分泌门诊2",
+    intro: "特需妇科内分泌门诊2",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2021-05-10T03:23:13.137Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.137Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b5a"),
+    hoscode: "1000",
+    depcode: "200048276",
+    depname: "妇泌中心(西院)",
+    intro: "妇泌中心(西院)",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2021-05-10T03:23:13.152Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.152Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b5b"),
+    hoscode: "1000",
+    depcode: "200048413",
+    depname: "特需普通妇科门诊",
+    intro: "特需普通妇科门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2021-05-10T03:23:13.166Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.166Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b5c"),
+    hoscode: "1000",
+    depcode: "200048441",
+    depname: "特需肿瘤妇科门诊",
+    intro: "特需肿瘤妇科门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2021-05-10T03:23:13.179Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.179Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b5d"),
+    hoscode: "1000",
+    depcode: "200048447",
+    depname: "特需妇科计划生育门诊",
+    intro: "特需妇科计划生育门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2021-05-10T03:23:13.192Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.192Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b5e"),
+    hoscode: "1000",
+    depcode: "200048487",
+    depname: "特需产科门诊",
+    intro: "特需产科门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2021-05-10T03:23:13.205Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.205Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b5f"),
+    hoscode: "1000",
+    depcode: "200048521",
+    depname: "妇科计划生育门诊",
+    intro: "妇科计划生育门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2021-05-10T03:23:13.216Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.216Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b60"),
+    hoscode: "1000",
+    depcode: "200048522",
+    depname: "综合妇科门诊",
+    intro: "综合妇科门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2021-05-10T03:23:13.23Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.23Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b61"),
+    hoscode: "1000",
+    depcode: "200048523",
+    depname: "妇科肿瘤门诊",
+    intro: "妇科肿瘤门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2021-05-10T03:23:13.245Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.245Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b62"),
+    hoscode: "1000",
+    depcode: "200004078",
+    depname: "妇产科辅助生育中心",
+    intro: "妇产科辅助生育中心",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2021-05-10T03:23:13.255Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.255Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b63"),
+    hoscode: "1000",
+    depcode: "200004073",
+    depname: "妇科门诊",
+    intro: "妇科门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2021-05-10T03:23:13.264Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.264Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b64"),
+    hoscode: "1000",
+    depcode: "200004074",
+    depname: "妇科门诊(西院)",
+    intro: "妇科门诊(西院)",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2021-05-10T03:23:13.278Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.278Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b65"),
+    hoscode: "1000",
+    depcode: "200004075",
+    depname: "特需妇科门诊",
+    intro: "特需妇科门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2021-05-10T03:23:13.293Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.293Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b66"),
+    hoscode: "1000",
+    depcode: "200004076",
+    depname: "特需妇科门诊(西院)1",
+    intro: "特需妇科门诊(西院)1",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2021-05-10T03:23:13.308Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.308Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b67"),
+    hoscode: "1000",
+    depcode: "200004080",
+    depname: "妇科内分泌门诊",
+    intro: "妇科内分泌门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2021-05-10T03:23:13.318Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.318Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b68"),
+    hoscode: "1000",
+    depcode: "200004081",
+    depname: "特需妇科内分泌门诊",
+    intro: "特需妇科内分泌门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2021-05-10T03:23:13.329Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.329Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b69"),
+    hoscode: "1000",
+    depcode: "200004082",
+    depname: "特需妇科内分泌门诊(西院)",
+    intro: "特需妇科内分泌门诊(西院)",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2021-05-10T03:23:13.344Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.344Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b6a"),
+    hoscode: "1000",
+    depcode: "200004077",
+    depname: "产科门诊",
+    intro: "产科门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2021-05-10T03:23:13.357Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.357Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b6b"),
+    hoscode: "1000",
+    depcode: "200004084",
+    depname: "儿科门诊",
+    intro: "儿科门诊",
+    bigcode: "2543ade3aecd3f5a3e2329d068c1d367",
+    bigname: "儿科",
+    createTime: ISODate("2021-05-10T03:23:13.366Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.366Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b6c"),
+    hoscode: "1000",
+    depcode: "200004085",
+    depname: "特需儿科门诊",
+    intro: "特需儿科门诊",
+    bigcode: "2543ade3aecd3f5a3e2329d068c1d367",
+    bigname: "儿科",
+    createTime: ISODate("2021-05-10T03:23:13.375Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.375Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b6d"),
+    hoscode: "1000",
+    depcode: "200004094",
+    depname: "变态反应科门诊",
+    intro: "变态反应科门诊",
+    bigcode: "e7391935e2070acf94e87b5b6f104f68",
+    bigname: "变态反应科",
+    createTime: ISODate("2021-05-10T03:23:13.39Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.39Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b6e"),
+    hoscode: "1000",
+    depcode: "200004095",
+    depname: "特需变态反应科门诊",
+    intro: "特需变态反应科门诊",
+    bigcode: "e7391935e2070acf94e87b5b6f104f68",
+    bigname: "变态反应科",
+    createTime: ISODate("2021-05-10T03:23:13.404Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.404Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b6f"),
+    hoscode: "1000",
+    depcode: "200048325",
+    depname: "特需皮肤科门诊2",
+    intro: "特需皮肤科门诊2",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2021-05-10T03:23:13.414Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.414Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b70"),
+    hoscode: "1000",
+    depcode: "200048377",
+    depname: "皮科激光中心",
+    intro: "皮科激光中心",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2021-05-10T03:23:13.423Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.423Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b71"),
+    hoscode: "1000",
+    depcode: "200048468",
+    depname: "普通皮科复诊",
+    intro: "普通皮科复诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2021-05-10T03:23:13.438Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.438Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b72"),
+    hoscode: "1000",
+    depcode: "200048529",
+    depname: "特需口腔科门诊2",
+    intro: "特需口腔科门诊2",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2021-05-10T03:23:13.452Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.452Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b73"),
+    hoscode: "1000",
+    depcode: "200004107",
+    depname: "皮肤科白癜风副教授门诊",
+    intro: "皮肤科白癜风副教授门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2021-05-10T03:23:13.467Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.467Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b74"),
+    hoscode: "1000",
+    depcode: "200004108",
+    depname: "皮肤科普通皮科门诊",
+    intro: "皮肤科普通皮科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2021-05-10T03:23:13.476Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.476Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b75"),
+    hoscode: "1000",
+    depcode: "200004119",
+    depname: "美容皮肤科门诊",
+    intro: "美容皮肤科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2021-05-10T03:23:13.485Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.485Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b76"),
+    hoscode: "1000",
+    depcode: "200004086",
+    depname: "眼科门诊",
+    intro: "眼科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2021-05-10T03:23:13.501Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.501Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b77"),
+    hoscode: "1000",
+    depcode: "200004087",
+    depname: "眼科门诊(西院)",
+    intro: "眼科门诊(西院)",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2021-05-10T03:23:13.515Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.515Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b78"),
+    hoscode: "1000",
+    depcode: "200004088",
+    depname: "特需眼科门诊",
+    intro: "特需眼科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2021-05-10T03:23:13.528Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.528Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b79"),
+    hoscode: "1000",
+    depcode: "200004089",
+    depname: "眼科糖尿病视网膜病专科",
+    intro: "眼科糖尿病视网膜病专科",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2021-05-10T03:23:13.543Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.543Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b7a"),
+    hoscode: "1000",
+    depcode: "200004096",
+    depname: "口腔科门诊",
+    intro: "口腔科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2021-05-10T03:23:13.555Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.555Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b7b"),
+    hoscode: "1000",
+    depcode: "200004097",
+    depname: "口腔科门诊(西院)",
+    intro: "口腔科门诊(西院)",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2021-05-10T03:23:13.565Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.565Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b7c"),
+    hoscode: "1000",
+    depcode: "200004101",
+    depname: "口腔科住院医门诊",
+    intro: "口腔科住院医门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2021-05-10T03:23:13.581Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.581Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b7d"),
+    hoscode: "1000",
+    depcode: "200004098",
+    depname: "口腔科洁牙门诊",
+    intro: "口腔科洁牙门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2021-05-10T03:23:13.595Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.595Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b7e"),
+    hoscode: "1000",
+    depcode: "200004099",
+    depname: "特需口腔外科门诊",
+    intro: "特需口腔外科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2021-05-10T03:23:13.609Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.609Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b7f"),
+    hoscode: "1000",
+    depcode: "200004100",
+    depname: "口腔科特需门诊(西院)",
+    intro: "口腔科特需门诊(西院)",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2021-05-10T03:23:13.624Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.624Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b80"),
+    hoscode: "1000",
+    depcode: "200004090",
+    depname: "耳鼻喉科门诊",
+    intro: "耳鼻喉科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2021-05-10T03:23:13.639Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.639Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b81"),
+    hoscode: "1000",
+    depcode: "200004091",
+    depname: "耳鼻喉科门诊(西院)",
+    intro: "耳鼻喉科门诊(西院)",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2021-05-10T03:23:13.653Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.653Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b82"),
+    hoscode: "1000",
+    depcode: "200004093",
+    depname: "特需耳鼻喉科门诊",
+    intro: "特需耳鼻喉科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2021-05-10T03:23:13.667Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.667Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b83"),
+    hoscode: "1000",
+    depcode: "200004102",
+    depname: "皮科门诊",
+    intro: "皮科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2021-05-10T03:23:13.677Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.677Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b84"),
+    hoscode: "1000",
+    depcode: "200004103",
+    depname: "皮科门诊(西院)",
+    intro: "皮科门诊(西院)",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2021-05-10T03:23:13.7Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.7Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b85"),
+    hoscode: "1000",
+    depcode: "200004104",
+    depname: "皮肤科性病门诊",
+    intro: "皮肤科性病门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2021-05-10T03:23:13.714Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.714Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b86"),
+    hoscode: "1000",
+    depcode: "200004106",
+    depname: "特需皮肤科门诊",
+    intro: "特需皮肤科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2021-05-10T03:23:13.73Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.73Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b87"),
+    hoscode: "1000",
+    depcode: "200041040",
+    depname: "特需中医科门诊2",
+    intro: "特需中医科门诊2",
+    bigcode: "7dafa91626a45481feefb3d1a84c7984",
+    bigname: "中医科",
+    createTime: ISODate("2021-05-10T03:23:13.753Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.753Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b88"),
+    hoscode: "1000",
+    depcode: "200048480",
+    depname: "卫干门诊(中医科)",
+    intro: "卫干门诊(中医科)",
+    bigcode: "7dafa91626a45481feefb3d1a84c7984",
+    bigname: "中医科",
+    createTime: ISODate("2021-05-10T03:23:13.772Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.772Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b89"),
+    hoscode: "1000",
+    depcode: "200004112",
+    depname: "中医科针灸室(西院)",
+    intro: "中医科针灸室(西院)",
+    bigcode: "7dafa91626a45481feefb3d1a84c7984",
+    bigname: "中医科",
+    createTime: ISODate("2021-05-10T03:23:13.789Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.789Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b8a"),
+    hoscode: "1000",
+    depcode: "200004110",
+    depname: "中医科针灸室",
+    intro: "中医科针灸室",
+    bigcode: "7dafa91626a45481feefb3d1a84c7984",
+    bigname: "中医科",
+    createTime: ISODate("2021-05-10T03:23:13.803Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.803Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b8b"),
+    hoscode: "1000",
+    depcode: "200004109",
+    depname: "中医科门诊",
+    intro: "中医科门诊",
+    bigcode: "7dafa91626a45481feefb3d1a84c7984",
+    bigname: "中医科",
+    createTime: ISODate("2021-05-10T03:23:13.816Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.816Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b8c"),
+    hoscode: "1000",
+    depcode: "200004111",
+    depname: "中医科门诊(西院)",
+    intro: "中医科门诊(西院)",
+    bigcode: "7dafa91626a45481feefb3d1a84c7984",
+    bigname: "中医科",
+    createTime: ISODate("2021-05-10T03:23:13.829Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.829Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b8d"),
+    hoscode: "1000",
+    depcode: "200004113",
+    depname: "特需中医科门诊1",
+    intro: "特需中医科门诊1",
+    bigcode: "7dafa91626a45481feefb3d1a84c7984",
+    bigname: "中医科",
+    createTime: ISODate("2021-05-10T03:23:13.841Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.841Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b8e"),
+    hoscode: "1000",
+    depcode: "200048262",
+    depname: "临床营养科西院门诊",
+    intro: "临床营养科西院门诊",
+    bigcode: "4dcb42d3a6ca39589f20bcd160903ae9",
+    bigname: "营养科",
+    createTime: ISODate("2021-05-10T03:23:13.855Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.855Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b8f"),
+    hoscode: "1000",
+    depcode: "200047302",
+    depname: "特需营养科门诊1",
+    intro: "特需营养科门诊1",
+    bigcode: "4dcb42d3a6ca39589f20bcd160903ae9",
+    bigname: "营养科",
+    createTime: ISODate("2021-05-10T03:23:13.866Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.866Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b90"),
+    hoscode: "1000",
+    depcode: "200004133",
+    depname: "营养科咨询门诊",
+    intro: "营养科咨询门诊",
+    bigcode: "4dcb42d3a6ca39589f20bcd160903ae9",
+    bigname: "营养科",
+    createTime: ISODate("2021-05-10T03:23:13.877Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.877Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b91"),
+    hoscode: "1000",
+    depcode: "200040878",
+    depname: "多发性硬化专科门诊",
+    intro: "多发性硬化专科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2021-05-10T03:23:13.89Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.89Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b92"),
+    hoscode: "1000",
+    depcode: "200040182",
+    depname: "运动障碍病专科门诊",
+    intro: "运动障碍病专科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2021-05-10T03:23:13.903Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.903Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b93"),
+    hoscode: "1000",
+    depcode: "200048482",
+    depname: "特需病理科门诊",
+    intro: "特需病理科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2021-05-10T03:23:13.917Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.917Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b94"),
+    hoscode: "1000",
+    depcode: "200048483",
+    depname: "病理科门诊",
+    intro: "病理科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2021-05-10T03:23:13.927Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.927Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b95"),
+    hoscode: "1000",
+    depcode: "200004057",
+    depname: "麻醉科门诊",
+    intro: "麻醉科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2021-05-10T03:23:13.939Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.939Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b96"),
+    hoscode: "1000",
+    depcode: "200004124",
+    depname: "放疗科门诊",
+    intro: "放疗科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2021-05-10T03:23:13.953Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.953Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b97"),
+    hoscode: "1000",
+    depcode: "200004125",
+    depname: "放疗科门诊(西院)",
+    intro: "放疗科门诊(西院)",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2021-05-10T03:23:13.965Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.965Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b98"),
+    hoscode: "1000",
+    depcode: "200004126",
+    depname: "特需放疗科门诊",
+    intro: "特需放疗科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2021-05-10T03:23:13.977Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.977Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7217268a74686e98b99"),
+    hoscode: "1000",
+    depcode: "200004117",
+    depname: "心理医学科门诊",
+    intro: "心理医学科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2021-05-10T03:23:13.988Z"),
+    updateTime: ISODate("2021-05-10T03:23:13.988Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98b9a"),
+    hoscode: "1000",
+    depcode: "200004118",
+    depname: "特需心理医学科门诊1",
+    intro: "特需心理医学科门诊1",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2021-05-10T03:23:14.001Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.001Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98b9b"),
+    hoscode: "1000",
+    depcode: "200004123",
+    depname: "介入治疗门诊(放射科)",
+    intro: "介入治疗门诊(放射科)",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2021-05-10T03:23:14.016Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.016Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98b9c"),
+    hoscode: "1000",
+    depcode: "200004130",
+    depname: "超声介入门诊",
+    intro: "超声介入门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2021-05-10T03:23:14.03Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.03Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98b9d"),
+    hoscode: "1000",
+    depcode: "200004129",
+    depname: "物理医学康复科门诊",
+    intro: "物理医学康复科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2021-05-10T03:23:14.046Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.046Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98b9e"),
+    hoscode: "1000",
+    depcode: "200004127",
+    depname: "物理医学康复科门诊(西院)",
+    intro: "物理医学康复科门诊(西院)",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2021-05-10T03:23:14.062Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.062Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98b9f"),
+    hoscode: "1000",
+    depcode: "200004120",
+    depname: "肠外肠内营养科门诊",
+    intro: "肠外肠内营养科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2021-05-10T03:23:14.074Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.074Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98ba0"),
+    hoscode: "1000",
+    depcode: "200004122",
+    depname: "特需肠外肠内营养科门诊",
+    intro: "特需肠外肠内营养科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2021-05-10T03:23:14.086Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.086Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98ba1"),
+    hoscode: "1000",
+    depcode: "200004131",
+    depname: "核医学科门诊",
+    intro: "核医学科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2021-05-10T03:23:14.098Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.098Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98ba2"),
+    hoscode: "1000",
+    depcode: "200004132",
+    depname: "特需核医学门诊",
+    intro: "特需核医学门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2021-05-10T03:23:14.11Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.11Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98ba3"),
+    hoscode: "1000",
+    depcode: "200004055",
+    depname: "麻醉科",
+    intro: "麻醉科",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2021-05-10T03:23:14.123Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.123Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98ba4"),
+    hoscode: "1000",
+    depcode: "200004056",
+    depname: "麻醉科疼痛门诊",
+    intro: "麻醉科疼痛门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2021-05-10T03:23:14.134Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.134Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98ba5"),
+    hoscode: "1000",
+    depcode: "200040142",
+    depname: "肾内科IGA肾病专病门诊",
+    intro: "肾内科IGA肾病专病门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2021-05-10T03:23:14.144Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.144Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98ba6"),
+    hoscode: "1000",
+    depcode: "200048338",
+    depname: "检验科门诊",
+    intro: "检验科门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2021-05-10T03:23:14.157Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.157Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98ba7"),
+    hoscode: "1000",
+    depcode: "200048491",
+    depname: "门诊部疑难病会诊中心(东院)",
+    intro: "门诊部疑难病会诊中心(东院)",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2021-05-10T03:23:14.172Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.172Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98ba8"),
+    hoscode: "1000",
+    depcode: "200048571",
+    depname: "加速器治疗室(放疗科)(西院)",
+    intro: "加速器治疗室(放疗科)(西院)",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2021-05-10T03:23:14.184Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.184Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98ba9"),
+    hoscode: "1000",
+    depcode: "200048575",
+    depname: "生殖中心门诊(西院)",
+    intro: "生殖中心门诊(西院)",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2021-05-10T03:23:14.194Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.194Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98baa"),
+    hoscode: "1000",
+    depcode: "200004013",
+    depname: "帕金森专病门诊",
+    intro: "帕金森专病门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2021-05-10T03:23:14.206Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.206Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bab"),
+    hoscode: "1000",
+    depcode: "200004037",
+    depname: "癫痫门诊",
+    intro: "癫痫门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2021-05-10T03:23:14.221Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.221Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bac"),
+    hoscode: "1000",
+    depcode: "200004021",
+    depname: "老年医学科门诊",
+    intro: "老年医学科门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2021-05-10T03:23:14.234Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.234Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bad"),
+    hoscode: "1000",
+    depcode: "200004038",
+    depname: "神经外科垂体专病门诊",
+    intro: "神经外科垂体专病门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2021-05-10T03:23:14.253Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.253Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bae"),
+    hoscode: "1000",
+    depcode: "200004039",
+    depname: "神经外科脊髓疾病专科门诊",
+    intro: "神经外科脊髓疾病专科门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2021-05-10T03:23:14.267Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.267Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98baf"),
+    hoscode: "1000",
+    depcode: "200004048",
+    depname: "泌尿外科泌尿结石门诊",
+    intro: "泌尿外科泌尿结石门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2021-05-10T03:23:14.279Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.279Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bb0"),
+    hoscode: "1000",
+    depcode: "200004050",
+    depname: "泌尿外科膀胱癌专科门诊",
+    intro: "泌尿外科膀胱癌专科门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2021-05-10T03:23:14.29Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.29Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bb1"),
+    hoscode: "1000",
+    depcode: "200004024",
+    depname: "基本外科肠造口门诊",
+    intro: "基本外科肠造口门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2021-05-10T03:23:14.3Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.3Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bb2"),
+    hoscode: "1000",
+    depcode: "200004092",
+    depname: "耳聋基因筛查遗传门诊",
+    intro: "耳聋基因筛查遗传门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2021-05-10T03:23:14.314Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.314Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bb3"),
+    hoscode: "1000",
+    depcode: "200004128",
+    depname: "特需康复理疗门诊2",
+    intro: "特需康复理疗门诊2",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2021-05-10T03:23:14.329Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.329Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bb4"),
+    hoscode: "1000",
+    depcode: "200004036",
+    depname: "疼痛门诊",
+    intro: "疼痛门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2021-05-10T03:23:14.341Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.341Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bb5"),
+    hoscode: "1000",
+    depcode: "200004058",
+    depname: "特需麻醉科门诊2",
+    intro: "特需麻醉科门诊2",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2021-05-10T03:23:14.35Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.35Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bb6"),
+    hoscode: "1000",
+    depcode: "200004135",
+    depname: "针灸按摩室(西院)",
+    intro: "针灸按摩室(西院)",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2021-05-10T03:23:14.36Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.36Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bb7"),
+    hoscode: "1000",
+    depcode: "200004121",
+    depname: "肠外肠内营养科门诊(西院)",
+    intro: "肠外肠内营养科门诊(西院)",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2021-05-10T03:23:14.375Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.375Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bb8"),
+    hoscode: "1000",
+    depcode: "200041160",
+    depname: "特需放射科门诊1",
+    intro: "特需放射科门诊1",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2021-05-10T03:23:14.389Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.389Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bb9"),
+    hoscode: "1000",
+    depcode: "200048271",
+    depname: "国际医疗(儿科)",
+    intro: "国际医疗(儿科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.398Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.398Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bba"),
+    hoscode: "1000",
+    depcode: "200048272",
+    depname: "国际医疗(预防接种)",
+    intro: "国际医疗(预防接种)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.408Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.408Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bbb"),
+    hoscode: "1000",
+    depcode: "200048273",
+    depname: "国际医疗(神经科)",
+    intro: "国际医疗(神经科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.423Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.423Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bbc"),
+    hoscode: "1000",
+    depcode: "200048274",
+    depname: "国际医疗(胸外科)",
+    intro: "国际医疗(胸外科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.433Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.433Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bbd"),
+    hoscode: "1000",
+    depcode: "200048278",
+    depname: "国际医疗(内分泌科)",
+    intro: "国际医疗(内分泌科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.444Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.444Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bbe"),
+    hoscode: "1000",
+    depcode: "200048279",
+    depname: "基本外科门诊(西院国际医疗)",
+    intro: "基本外科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.456Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.456Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bbf"),
+    hoscode: "1000",
+    depcode: "200048280",
+    depname: "内分泌科门诊(西院国际医疗)",
+    intro: "内分泌科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.471Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.471Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bc0"),
+    hoscode: "1000",
+    depcode: "200048281",
+    depname: "国际医疗(消化内科)",
+    intro: "国际医疗(消化内科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.485Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.485Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bc1"),
+    hoscode: "1000",
+    depcode: "200048282",
+    depname: "国际医疗(普通内科)",
+    intro: "国际医疗(普通内科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.495Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.495Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bc2"),
+    hoscode: "1000",
+    depcode: "200048283",
+    depname: "国际医疗(皮肤科)",
+    intro: "国际医疗(皮肤科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.504Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.504Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bc3"),
+    hoscode: "1000",
+    depcode: "200048286",
+    depname: "消化内科门诊(西院国际医疗)",
+    intro: "消化内科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.518Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.518Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bc4"),
+    hoscode: "1000",
+    depcode: "200048288",
+    depname: "国际医疗(感染内科)",
+    intro: "国际医疗(感染内科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.532Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.532Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bc5"),
+    hoscode: "1000",
+    depcode: "200048289",
+    depname: "国际医疗(变态反应科)",
+    intro: "国际医疗(变态反应科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.542Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.542Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bc6"),
+    hoscode: "1000",
+    depcode: "200048290",
+    depname: "国际医疗(免疫内科)",
+    intro: "国际医疗(免疫内科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.551Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.551Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bc7"),
+    hoscode: "1000",
+    depcode: "200048293",
+    depname: "国际医疗(中医科)",
+    intro: "国际医疗(中医科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.565Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.565Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bc8"),
+    hoscode: "1000",
+    depcode: "200048294",
+    depname: "国际医疗(呼吸内科)",
+    intro: "国际医疗(呼吸内科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.58Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.58Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bc9"),
+    hoscode: "1000",
+    depcode: "200048297",
+    depname: "国际医疗(美容外科)",
+    intro: "国际医疗(美容外科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.589Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.589Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bca"),
+    hoscode: "1000",
+    depcode: "200048298",
+    depname: "国际医疗(产科)",
+    intro: "国际医疗(产科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.599Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.599Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bcb"),
+    hoscode: "1000",
+    depcode: "200048299",
+    depname: "医学美容中心外科门诊(西院国际医疗)",
+    intro: "医学美容中心外科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.614Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.614Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bcc"),
+    hoscode: "1000",
+    depcode: "200048300",
+    depname: "国际医疗(血管外科)",
+    intro: "国际医疗(血管外科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.628Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.628Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bcd"),
+    hoscode: "1000",
+    depcode: "200048301",
+    depname: "核医学科(西院国际医疗)",
+    intro: "核医学科(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.64Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.64Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bce"),
+    hoscode: "1000",
+    depcode: "200048304",
+    depname: "国际医疗(妇科内分泌)",
+    intro: "国际医疗(妇科内分泌)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.653Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.653Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bcf"),
+    hoscode: "1000",
+    depcode: "200048308",
+    depname: "变态（过敏）反应科门诊(西院国际医疗)",
+    intro: "变态（过敏）反应科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.664Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.664Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bd0"),
+    hoscode: "1000",
+    depcode: "200048309",
+    depname: "免疫内科门诊(西院国际医疗)",
+    intro: "免疫内科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.677Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.677Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bd1"),
+    hoscode: "1000",
+    depcode: "200048310",
+    depname: "国际医疗(骨科)",
+    intro: "国际医疗(骨科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.691Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.691Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bd2"),
+    hoscode: "1000",
+    depcode: "200048311",
+    depname: "口腔科门诊(西院国际医疗)",
+    intro: "口腔科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.702Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.702Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bd3"),
+    hoscode: "1000",
+    depcode: "200048312",
+    depname: "国际医疗(泌尿外科)",
+    intro: "国际医疗(泌尿外科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.712Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.712Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bd4"),
+    hoscode: "1000",
+    depcode: "200048313",
+    depname: "国际医疗(核医学科)",
+    intro: "国际医疗(核医学科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.724Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.724Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bd5"),
+    hoscode: "1000",
+    depcode: "200048314",
+    depname: "内分泌与生殖妇科中心门诊(西院国际医疗)",
+    intro: "内分泌与生殖妇科中心门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.739Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.739Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bd6"),
+    hoscode: "1000",
+    depcode: "200048315",
+    depname: "国际医疗(血液科)",
+    intro: "国际医疗(血液科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.754Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.754Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bd7"),
+    hoscode: "1000",
+    depcode: "200048316",
+    depname: "国际医疗(美容皮肤科)",
+    intro: "国际医疗(美容皮肤科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.762Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.762Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bd8"),
+    hoscode: "1000",
+    depcode: "200048317",
+    depname: "国际医疗(耳鼻喉科)",
+    intro: "国际医疗(耳鼻喉科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.772Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.772Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bd9"),
+    hoscode: "1000",
+    depcode: "200048318",
+    depname: "国际医疗(神经外科)",
+    intro: "国际医疗(神经外科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.787Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.787Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bda"),
+    hoscode: "1000",
+    depcode: "200048319",
+    depname: "肿瘤内科门诊(西院国际医疗)",
+    intro: "肿瘤内科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.8Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.8Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bdb"),
+    hoscode: "1000",
+    depcode: "200048320",
+    depname: "耳鼻喉科门诊(西院国际医疗)",
+    intro: "耳鼻喉科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.81Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.81Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bdc"),
+    hoscode: "1000",
+    depcode: "200048326",
+    depname: "国际医疗(针灸按摩室)",
+    intro: "国际医疗(针灸按摩室)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.823Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.823Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bdd"),
+    hoscode: "1000",
+    depcode: "200048327",
+    depname: "国际医疗(心内科)",
+    intro: "国际医疗(心内科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.837Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.837Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bde"),
+    hoscode: "1000",
+    depcode: "200048328",
+    depname: "国际医疗(口腔科)",
+    intro: "国际医疗(口腔科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.851Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.851Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bdf"),
+    hoscode: "1000",
+    depcode: "200048329",
+    depname: "国际医疗(麻醉科)",
+    intro: "国际医疗(麻醉科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.866Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.866Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98be0"),
+    hoscode: "1000",
+    depcode: "200048330",
+    depname: "神经科门诊(西院国际医疗)",
+    intro: "神经科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.876Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.876Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98be1"),
+    hoscode: "1000",
+    depcode: "200048332",
+    depname: "呼吸内科门诊(西院国际医疗)",
+    intro: "呼吸内科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.885Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.885Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98be2"),
+    hoscode: "1000",
+    depcode: "200048333",
+    depname: "国际医疗(物理医学康复科)",
+    intro: "国际医疗(物理医学康复科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.897Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.897Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98be3"),
+    hoscode: "1000",
+    depcode: "200048334",
+    depname: "心内科门诊(西院国际医疗)",
+    intro: "心内科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.911Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.911Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98be4"),
+    hoscode: "1000",
+    depcode: "200048335",
+    depname: "肾内科门诊(西院国际医疗)",
+    intro: "肾内科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.926Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.926Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98be5"),
+    hoscode: "1000",
+    depcode: "200048346",
+    depname: "国际医疗(基本外科)",
+    intro: "国际医疗(基本外科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.935Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.935Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98be6"),
+    hoscode: "1000",
+    depcode: "200048347",
+    depname: "乳腺外科门诊(西院国际医疗)",
+    intro: "乳腺外科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.944Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.944Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98be7"),
+    hoscode: "1000",
+    depcode: "200048348",
+    depname: "国际医疗(肾内科)",
+    intro: "国际医疗(肾内科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.959Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.959Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98be8"),
+    hoscode: "1000",
+    depcode: "200048349",
+    depname: "皮肤科门诊(西院国际医疗)",
+    intro: "皮肤科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.973Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.973Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98be9"),
+    hoscode: "1000",
+    depcode: "200048350",
+    depname: "国际医疗(眼科)",
+    intro: "国际医疗(眼科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.982Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.982Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7227268a74686e98bea"),
+    hoscode: "1000",
+    depcode: "200048352",
+    depname: "国际医疗(肝脏外科)",
+    intro: "国际医疗(肝脏外科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:14.991Z"),
+    updateTime: ISODate("2021-05-10T03:23:14.991Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7237268a74686e98beb"),
+    hoscode: "1000",
+    depcode: "200048353",
+    depname: "眼科门诊(西院国际医疗)",
+    intro: "眼科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:15.007Z"),
+    updateTime: ISODate("2021-05-10T03:23:15.007Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7237268a74686e98bec"),
+    hoscode: "1000",
+    depcode: "200048355",
+    depname: "麻醉科(西院国际医疗)",
+    intro: "麻醉科(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:15.021Z"),
+    updateTime: ISODate("2021-05-10T03:23:15.021Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7237268a74686e98bed"),
+    hoscode: "1000",
+    depcode: "200048356",
+    depname: "国际医疗(肿瘤内科)",
+    intro: "国际医疗(肿瘤内科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:15.03Z"),
+    updateTime: ISODate("2021-05-10T03:23:15.03Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7237268a74686e98bee"),
+    hoscode: "1000",
+    depcode: "200048366",
+    depname: "国际医疗(营养科)",
+    intro: "国际医疗(营养科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:15.04Z"),
+    updateTime: ISODate("2021-05-10T03:23:15.04Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7237268a74686e98bef"),
+    hoscode: "1000",
+    depcode: "200048368",
+    depname: "国际医疗(放射治疗科)",
+    intro: "国际医疗(放射治疗科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:15.061Z"),
+    updateTime: ISODate("2021-05-10T03:23:15.061Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7237268a74686e98bf0"),
+    hoscode: "1000",
+    depcode: "200048379",
+    depname: "国际医疗部特约门诊",
+    intro: "国际医疗部特约门诊",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:15.072Z"),
+    updateTime: ISODate("2021-05-10T03:23:15.072Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7237268a74686e98bf1"),
+    hoscode: "1000",
+    depcode: "200048465",
+    depname: "物理医学康复科(西院国际医疗)",
+    intro: "物理医学康复科(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:15.087Z"),
+    updateTime: ISODate("2021-05-10T03:23:15.087Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7237268a74686e98bf2"),
+    hoscode: "1000",
+    depcode: "200048467",
+    depname: "泌尿外科门诊(西院国际医疗)",
+    intro: "泌尿外科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:15.099Z"),
+    updateTime: ISODate("2021-05-10T03:23:15.099Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7237268a74686e98bf3"),
+    hoscode: "1000",
+    depcode: "200048470",
+    depname: "国际医疗(肠外肠内营养科)",
+    intro: "国际医疗(肠外肠内营养科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:15.114Z"),
+    updateTime: ISODate("2021-05-10T03:23:15.114Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7237268a74686e98bf4"),
+    hoscode: "1000",
+    depcode: "200048485",
+    depname: "国际医疗(老年医学科)",
+    intro: "国际医疗(老年医学科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:15.123Z"),
+    updateTime: ISODate("2021-05-10T03:23:15.123Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7237268a74686e98bf5"),
+    hoscode: "1000",
+    depcode: "200048486",
+    depname: "普通内科门诊(西院国际医疗)",
+    intro: "普通内科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:15.133Z"),
+    updateTime: ISODate("2021-05-10T03:23:15.133Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7237268a74686e98bf6"),
+    hoscode: "1000",
+    depcode: "200048513",
+    depname: "医学美容中心门诊(西院国际医疗)",
+    intro: "医学美容中心门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:15.148Z"),
+    updateTime: ISODate("2021-05-10T03:23:15.148Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7237268a74686e98bf7"),
+    hoscode: "1000",
+    depcode: "200048524",
+    depname: "国际医疗(妇科肿瘤)",
+    intro: "国际医疗(妇科肿瘤)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:15.163Z"),
+    updateTime: ISODate("2021-05-10T03:23:15.163Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7237268a74686e98bf8"),
+    hoscode: "1000",
+    depcode: "200048525",
+    depname: "国际医疗(综合妇科)",
+    intro: "国际医疗(综合妇科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:15.172Z"),
+    updateTime: ISODate("2021-05-10T03:23:15.172Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7237268a74686e98bf9"),
+    hoscode: "1000",
+    depcode: "200048526",
+    depname: "国际医疗(妇科计划生育)",
+    intro: "国际医疗(妇科计划生育)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:15.182Z"),
+    updateTime: ISODate("2021-05-10T03:23:15.182Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7237268a74686e98bfa"),
+    hoscode: "1000",
+    depcode: "200048536",
+    depname: "骨科门诊(西院国际医疗)",
+    intro: "骨科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:15.197Z"),
+    updateTime: ISODate("2021-05-10T03:23:15.197Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7237268a74686e98bfb"),
+    hoscode: "1000",
+    depcode: "200048559",
+    depname: "国际医疗(放射科)",
+    intro: "国际医疗(放射科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:15.209Z"),
+    updateTime: ISODate("2021-05-10T03:23:15.209Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7237268a74686e98bfc"),
+    hoscode: "1000",
+    depcode: "200048585",
+    depname: "老年医学门诊(西院国际医疗)",
+    intro: "老年医学门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:15.218Z"),
+    updateTime: ISODate("2021-05-10T03:23:15.218Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7237268a74686e98bfd"),
+    hoscode: "1000",
+    depcode: "200048644",
+    depname: "儿科门诊(西院国际医疗)",
+    intro: "儿科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:15.23Z"),
+    updateTime: ISODate("2021-05-10T03:23:15.23Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6098a7237268a74686e98bff"),
+    hoscode: "1000",
+    depcode: "200004115",
+    depname: "国际医疗(心理医学科)",
+    intro: "国际医疗(心理医学科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-10T03:23:15.257Z"),
+    updateTime: ISODate("2021-05-10T03:23:15.257Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("6099def35fb1d647552d1e64"),
+    hoscode: "1000",
+    depcode: "200004114",
+    depname: "国际医疗(妇科)",
+    intro: "国际医疗(妇科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2021-05-11T01:33:39.415Z"),
+    updateTime: ISODate("2021-05-11T01:33:39.415Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.arthur.model.hosp.Department"
+} ]);
